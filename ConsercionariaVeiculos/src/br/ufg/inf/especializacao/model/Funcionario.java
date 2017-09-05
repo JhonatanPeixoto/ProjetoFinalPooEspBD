@@ -6,6 +6,7 @@
 package br.ufg.inf.especializacao.model;
 
 import java.sql.Date;
+import java.util.List;
 
 /**
  *
@@ -19,6 +20,15 @@ public class Funcionario {
     private char sexo;
     private Date datanasc;
     private int num_depto;
+    private List<Dependente> dependentes;
+
+    public List<Dependente> getDependentes() {
+        return dependentes;
+    }
+
+    public void setDependentes(List<Dependente> dependentes) {
+        this.dependentes = dependentes;
+    }
 
     public String getCpf_p_fisica() {
         return cpf_p_fisica;
