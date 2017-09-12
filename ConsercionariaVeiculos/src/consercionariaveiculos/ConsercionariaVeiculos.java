@@ -18,6 +18,7 @@ public class ConsercionariaVeiculos {
         // TODO code application logic here
         
         System.out.println("OI");
+        System.out.println("OI");
         
     }
     
