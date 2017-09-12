@@ -12,16 +12,6 @@ import java.sql.Date;
  * @author casa
  */
 public class Venda {
-    
-    private int id_cliente;
-    private String cpf_func;
-    private String chassi;
-    private Date datacompra;
-    private double vlrunitario;
-    private int qtde;
-    private double vlrprodutos;
-    private double desconto;
-    private double vlrtotal;
 
     public int getId_cliente() {
         return id_cliente;
@@ -47,20 +37,20 @@ public class Venda {
         this.chassi = chassi;
     }
 
-    public Date getDatacompra() {
-        return datacompra;
+    public Date getDataVenda() {
+        return dataVenda;
     }
 
-    public void setDatacompra(Date datacompra) {
-        this.datacompra = datacompra;
+    public void setDataVenda(Date dataVenda) {
+        this.dataVenda = dataVenda;
     }
 
-    public double getVlrunitario() {
-        return vlrunitario;
+    public float getValorUnitario() {
+        return valorUnitario;
     }
 
-    public void setVlrunitario(double vlrunitario) {
-        this.vlrunitario = vlrunitario;
+    public void setValorUnitario(float valorUnitario) {
+        this.valorUnitario = valorUnitario;
     }
 
     public int getQtde() {
@@ -71,30 +61,30 @@ public class Venda {
         this.qtde = qtde;
     }
 
-    public double getVlrprodutos() {
-        return vlrprodutos;
-    }
-
-    public void setVlrprodutos(double vlrprodutos) {
-        this.vlrprodutos = vlrprodutos;
-    }
-
-    public double getDesconto() {
+    public float getDesconto() {
         return desconto;
     }
 
-    public void setDesconto(double desconto) {
+    public void setDesconto(float desconto) {
         this.desconto = desconto;
     }
 
-    public double getVlrtotal() {
+    public float getVlrtotal() {
         return vlrtotal;
     }
 
-    public void setVlrtotal(double vlrtotal) {
+    public void setVlrtotal(float vlrtotal) {
         this.vlrtotal = vlrtotal;
     }
-    
-    
+  
+    private int id_cliente;
+    private String cpf_func;
+    private String chassi;
+    private Date dataVenda;
+    private float valorUnitario;
+    private int qtde;
+    private float desconto;
+    private float vlrtotal;
+
     
 }
