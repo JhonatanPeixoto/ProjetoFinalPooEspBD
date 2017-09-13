@@ -20,8 +20,6 @@ public class Conection {
        
     public static Connection getConnection() throws RuntimeException{
         Connection connection = null;
-        Statement comando = null;
-        ResultSet resultado = null;
         try {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection("jdbc:sqlite:test.db");
@@ -31,6 +29,7 @@ public class Conection {
         }
         return connection;
     }
+    
     
     
     

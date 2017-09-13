@@ -1,11 +1,14 @@
 
 package br.ufg.inf.especilizacao.data;
 
+import br.ufg.inf.especializacao.model.Funcionario;
 import br.ufg.inf.especializacao.model.Veiculo;
 import br.ufg.inf.especializacao.model.Venda;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class VeiculoDao {
 
@@ -51,6 +54,46 @@ public class VeiculoDao {
 		con.close();
                 
     } 
+    
+    
+    public Veiculo getByName(String nome) throws SQLException {
+        
+        
+        final String QUERY = "SELECT chassi,\n" +
+                            "       cor,\n" +
+                            "       ano,\n" +
+                            "       valor,\n" +
+                            "       id_veiculo\n" +
+                            "  FROM veiculo_estoque;";
+        Connection connection = Conection.getConnection();
+        Statement comando = null;
+        ResultSet resultado = null;
+        try {
+            comando = connection.createStatement();
+            resultado = comando.executeQuery(QUERY);
+
+            if (!resultado.next()) {
+                throw new RuntimeException("Não foi encontrada a veiculo com o "
+                        + " nome determinado");
+            }
+
+            Veiculo veiculo = new Veiculo();
+            
+            veiculo.setChassi(resultado.getCursorName(chassi));
+            veiculo.setId_veiculo(resultado.getInt(4));
+            veiculo.setNome(resultado.getString());
+            return veiculo;
+        } catch (SQLException e) {
+            throw new RuntimeException("Pessoa não encontrada");
+        } finally {
+            if(comando != null){
+                comando.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        }
+    }
     
 }
   

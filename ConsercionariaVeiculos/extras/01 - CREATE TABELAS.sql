@@ -1,7 +1,7 @@
 DROP TABLE funcionario cascade CONSTRAINTS;
 DROP TABLE veiculo cascade CONSTRAINTS;
 DROP TABLE compra cascade CONSTRAINTS;
-DROP TABLE vende cascade CONSTRAINTS;
+DROP TABLE venda cascade CONSTRAINTS;
 DROP TABLE fornecedor cascade CONSTRAINTS;
 DROP TABLE cliente cascade CONSTRAINTS;
 DROP TABLE p_fisica cascade CONSTRAINTS;
