@@ -32,7 +32,7 @@ public class ConsercionariaVeiculosMain {
        
         
         try {
-            veiculoDAO.incluirVeiculo(veiculo);
+          //  veiculoDAO.incluirVeiculo(veiculo);
         } catch (Exception ex) {
             System.out.println("Ocorreu um erro na operação: " 
                     + ex.getMessage());
