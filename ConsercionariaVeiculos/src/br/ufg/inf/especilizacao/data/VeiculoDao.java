@@ -82,9 +82,9 @@ public class VeiculoDao {
             ResultSet result = ps.executeQuery();
 
             if (!result.next()) {
-                veiculo.setChassi("");
-            }else{
-            
+                throw new RuntimeException("Não foi encontrado um veiculo com "
+                        + "o chassi: " + chassi + ".");
+            }
 
             veiculo.setId_veiculo(result.getInt("id_veiculo"));
             veiculo.setNome(result.getString("nome"));
@@ -94,7 +94,6 @@ public class VeiculoDao {
             veiculo.setCor(result.getString("cor"));
             veiculo.setAno(result.getString("ano"));
             veiculo.setValor(result.getDouble("valor"));
-            }
 
             return veiculo;
         } catch (SQLException e) {
