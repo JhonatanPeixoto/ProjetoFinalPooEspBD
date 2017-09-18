@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.ufg.inf.especializacao.model;
 
-/**
- *
- * @author Jhonatan
- */
+
 public class Veiculo {
 
 
@@ -20,6 +13,15 @@ public class Veiculo {
     private String cor;
     private String ano;
     private Double valor;
+    private String cpf_func;
+
+    public String getCpf_func() {
+        return cpf_func;
+    }
+
+    public void setCpf_func(String cpf_func) {
+        this.cpf_func = cpf_func;
+    }
 
     public int getId_veiculo() {
         return id_veiculo;
@@ -84,8 +86,8 @@ public class Veiculo {
     public void setValor(Double valor) {
         this.valor = valor;
     }
-    
-    
+
+ 
 
     
 }

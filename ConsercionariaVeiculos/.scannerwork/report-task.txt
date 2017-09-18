@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+projectKey=ConsercionariaVeiculos
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/ConsercionariaVeiculos
+ceTaskId=AV5zk4w3LfYoEH4mLn5e
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AV5zk4w3LfYoEH4mLn5e
+=======
+projectKey=ConsercionariaVeiculos
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/ConsercionariaVeiculos
+ceTaskId=AV5zk4w3LfYoEH4mLn5e
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AV5zk4w3LfYoEH4mLn5e
+>>>>>>> fb9f967b85f57548e49932376d56284443ce9eaf

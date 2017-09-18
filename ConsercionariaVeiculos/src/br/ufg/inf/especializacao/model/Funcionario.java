@@ -1,64 +1,48 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.ufg.inf.especializacao.model;
 
 import java.sql.Date;
-import java.util.List;
 
-/**
- *
- * @author Jhonatan
- */
+
 public class Funcionario {
     
-    private String cpf_p_fisica;
+    private String cpf;
     private String nome;
-    private String salario;
-    private char sexo;
+    private double salario;
+    private String sexo;
     private Date datanasc;
-    private int num_depto;
-    private List<Dependente> dependentes;
-
-    public List<Dependente> getDependentes() {
-        return dependentes;
+   
+ 
+  
+  public String getCpf() {
+        return cpf;
     }
 
-    public void setDependentes(List<Dependente> dependentes) {
-        this.dependentes = dependentes;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
-
-    public String getCpf_p_fisica() {
-        return cpf_p_fisica;
-    }
-
-    public void setCpf_p_fisica(String cpf_p_fisica) {
-        this.cpf_p_fisica = cpf_p_fisica;
-    }
-
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
+      
         this.nome = nome;
     }
 
-    public String getSalario() {
+    public Double getSalario() {
         return salario;
     }
 
-    public void setSalario(String salario) {
+    public void setSalario(Double salario) {
         this.salario = salario;
     }
 
-    public char getSexo() {
+    public String  getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
@@ -70,14 +54,6 @@ public class Funcionario {
         this.datanasc = datanasc;
     }
 
-    public int getNum_depto() {
-        return num_depto;
-    }
-
-    public void setNum_depto(int num_depto) {
-        this.num_depto = num_depto;
-    }
-    
     
     
 }
