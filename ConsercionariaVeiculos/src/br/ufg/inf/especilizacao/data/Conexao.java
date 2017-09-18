@@ -1,5 +1,6 @@
 
 package br.ufg.inf.especilizacao.data;
+<<<<<<< HEAD
 import java.sql.*;
 public class Conexao{
     
@@ -23,3 +24,27 @@ public class Conexao{
          }
 
 }
+=======
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
+
+public class Conexao {
+    
+  public Connection conectarNoBancoDeDados() throws ClassNotFoundException, SQLException {     
+      
+      
+	
+		Class.forName("org.sqlite.JDBC");
+		String url = "jdbc:sqlite:test.db";               
+		
+		Connection conexao = DriverManager.getConnection(url);
+                
+		return conexao;
+	}
+   
+}   
+>>>>>>> 866c406d2527f52e965c16514fe3005c33bcf700
